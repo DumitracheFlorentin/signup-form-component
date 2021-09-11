@@ -1,0 +1,112 @@
+.hero {
+  height: 100vh;
+  background-image: url("../../../images/bg-intro-desktop.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10rem;
+
+  &__details {
+    flex: 1.15;
+
+    &__title {
+      color: white;
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      width: 32em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  &__post {
+    flex: 1;
+
+    &__add {
+      text-align: center;
+      background-color: var(--blue);
+      color: white;
+      margin-bottom: 1.75rem;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: -2px 7px 4px hsla(249, 10%, 26%, 0.3);
+      cursor: pointer;
+
+      &__text {
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      margin-top: -0.2rem;
+      padding: 2.25rem 0;
+      border-radius: 10px;
+
+      &__firstName {
+        width: 33em;
+        padding: 0.8rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+      &__lastName {
+        @extend .hero__post__form__firstName;
+      }
+
+      &__email {
+        @extend .hero__post__form__firstName;
+      }
+
+      &__password {
+        @extend .hero__post__form__firstName;
+      }
+
+      &__freeButton {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+          @extend .hero__post__add;
+          border: none;
+          background-color: var(--green);
+          box-shadow: 0px 3px 3px hsla(249, 10%, 26%, 0.6);
+          width: 33em;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+
+      &__description {
+        margin-top: -0.5rem;
+        font-size: 0.65rem;
+        color: var(--grayish-blue);
+
+        span {
+          color: var(--red);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
